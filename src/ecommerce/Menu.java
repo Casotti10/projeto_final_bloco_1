@@ -49,7 +49,7 @@ public class Menu {
 			}
 
 			if (opcao == 6) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nAçaí bão demais - NOSSA! BÃO DEMAIS SÔ");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "\nAÇAI UAI - NOSSA! BÃO DEMAIS SÔ");
 				leia.close();
 				System.exit(0);
 			}
