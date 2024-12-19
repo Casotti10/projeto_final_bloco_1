@@ -33,4 +33,18 @@ public class AcaiEspecial extends Acai {
 		
 	}
 
+
+	@Override
+	protected Object getTamanho() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	protected void setTamanho(Object tamanho2) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

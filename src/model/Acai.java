@@ -45,4 +45,8 @@ public abstract class Acai {
 		System.out.println("Preço: " + preco); 
 		
 	}
+
+	protected abstract Object getTamanho();
+
+	protected abstract void setTamanho(Object tamanho2);
 }
