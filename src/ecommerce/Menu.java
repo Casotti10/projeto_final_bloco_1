@@ -3,14 +3,15 @@ package ecommerce;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import cores.Cores;
-
 public class Menu {
 
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
 
+		int id, adicional;
+		String nome, tamanho;
+		double preco;
 		int opcao;
 
 		while (true) {
@@ -41,34 +42,39 @@ public class Menu {
 				continue;
 			}
 
+			if (opcao == 6) {
+				System.out.println(Cores.TEXT_WHITE_BOLD + "\nAçaí bão demais - NOSSA! BÃO DEMAIS SÔ");
+				leia.close();
+				System.exit(0);
+			}
 			switch (opcao) {
 			case 1:
-				System.out.println("Cadastrar Produto: \n\n");
-
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Cadastrar Produto: \n\n");
+				
 				break;
 			case 2:
-				System.out.println("Listar Produto: \n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar Produto: \n\n");
 
 				break;
 			case 3:
-				System.out.println("Buscar produto: \n\n");
-				
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Buscar produto: \n\n");
+				System.out.println("Digite o numero do pedido: ");
+
 				break;
 			case 4:
-				System.out.println("Atualizar Produto \n\n");
-				
-				break; 
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar Produto \n\n");
+
+				break;
 			case 5:
-				System.out.println("Deletar Produto \n\n");
-				
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Deletar Produto \n\n");
+
 				break;
-			case 6:
-				System.out.println("Sair Produto \n\n");
-			
+			default:
+				System.out.println("\nOpção Inválida!\n");
 				break;
+
 			}
 
-	
 		}
 	}
 }

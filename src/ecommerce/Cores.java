@@ -1,4 +1,4 @@
-package cores;
+package ecommerce;
 
 public class Cores {
 	public static final String TEXT_RESET = "\u001B[0m";
