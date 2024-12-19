@@ -3,12 +3,11 @@ package repository;
 import model.Acai;
 
 public interface AcaiRepository {
-	void cadastrarProduto(String nome);
 
-	public void procurarPorNumero();
-	public void listarAcai();
-	public void cadastrar();
-	public void atualizar();
-	public void deletar();
+	void deletar(int numero);
+	void atualizar(Acai acai);
+	void cadastrar(Acai acai);
+	void procurarPorNumero(int numero);
+	void listarAcai();
 }
 

@@ -38,7 +38,8 @@ public abstract class Acai {
 		this.preco = preco;
 	}
 
-	public void exibirDetalhes() {
+	
+	public void visualizar() {
 		System.out.println("ID: " + id);
 		System.out.println("Nome: " + nome);
 		System.out.println("Preço: " + preco); 
