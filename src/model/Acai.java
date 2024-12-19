@@ -41,6 +41,7 @@ public abstract class Acai {
 	public void exibirDetalhes() {
 		System.out.println("ID: " + id);
 		System.out.println("Nome: " + nome);
-		System.out.println("Preço: " + preco);
+		System.out.println("Preço: " + preco); 
+		
 	}
 }

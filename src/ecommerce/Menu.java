@@ -10,7 +10,7 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 
 		int id, adicional;
-		String nome, tamanho;
+		String nome, tamanho, sabor;
 		double preco;
 		int opcao;
 
