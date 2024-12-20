@@ -3,15 +3,14 @@ package model;
 public class AcaiEspecial extends Acai {
 
 	private double adicional;
-	private String sabor; 
-	
-	public AcaiEspecial(int id, String nome, double preco,String tamanho, int adicional, String sabor) {
+	private String sabor;
+
+	public AcaiEspecial(int id, String nome, double preco, String tamanho, double adicional, String sabor) {
 		super(id, nome, preco, tamanho);
 		this.adicional = adicional;
 		this.sabor = sabor;
 	}
-	
-	
+
 	public double getAdicional() {
 		return adicional;
 	}
@@ -28,23 +27,19 @@ public class AcaiEspecial extends Acai {
 		this.sabor = sabor;
 	}
 
-	public void visualizar() { //Poliformismo Sobrescrito
+	@Override
+	public void visualizar() {
+		super.visualizar(); // Exibe os atributos da classe pai
 		System.out.println("Adicional: " + adicional);
-		
+		System.out.println("Sabor: " + sabor);
 	}
 
+	protected String getTamanho() {
+		return this.tamanho; // Acessa diretamente o atributo tamanho
+	}
 
 	@Override
-	protected Object getTamanho() {
-		// TODO Auto-generated method stub
-		return null;
+	protected void setTamanho(String tamanho) {
+	    this.tamanho = tamanho; // Define diretamente o atributo tamanho
 	}
-
-
-	@Override
-	protected void setTamanho(Object tamanho2) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

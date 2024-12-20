@@ -1,13 +1,14 @@
 package model;
 
-public abstract class Acai {
+public abstract class Acai extends Produto {
 
 	private int id;
-	private String nome, tamanho;
+	private String nome;
+	protected String tamanho;
 	private double preco;
-	
 
 	public Acai(int id, String nome, double preco, String tamanho) {
+		super(nome, preco);
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
@@ -38,15 +39,14 @@ public abstract class Acai {
 		this.preco = preco;
 	}
 
-	
 	public void visualizar() {
 		System.out.println("ID: " + id);
 		System.out.println("Nome: " + nome);
-		System.out.println("Preço: " + preco); 
-		
+		System.out.println("Preço: " + preco);
+		System.out.println("Tamanho: " + tamanho);
 	}
 
-	protected abstract Object getTamanho();
+	protected abstract String getTamanho();
 
-	protected abstract void setTamanho(Object tamanho2);
+	protected abstract void setTamanho(String tamanho);
 }
