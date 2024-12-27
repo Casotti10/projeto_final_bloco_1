@@ -16,7 +16,7 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 
 		int id, adicional;
-		String nome, tamanho, sabor;
+		String nome, tamanho;
 		double preco;
 		int opcao;
 
@@ -88,10 +88,9 @@ public class Menu {
 		leia.nextLine();
 		System.out.print("Tamanho: ");
 		String tamanho = leia.nextLine();
-		System.out.print("Sabor: ");
-		String sabor = leia.nextLine();
+		
 
-		Produto novoProduto = new Produto(idCounter++, nome, preco, tamanho, sabor);
+		Produto novoProduto = new Produto(idCounter++, nome, preco, tamanho, tamanho);
 		produtos.add(novoProduto);
 
 		System.out.println("Produto cadastrado com sucesso!");
@@ -154,8 +153,6 @@ public class Menu {
 			leia.nextLine();
 			System.out.print("Novo tamanho: ");
 			produto.setTamanho(leia.nextLine());
-			System.out.print("Novo sabor: ");
-			produto.setSabor(leia.nextLine());
 
 			System.out.println("Produto atualizado com sucesso!");
 		} else {
@@ -198,59 +195,51 @@ public class Menu {
 
 	// Classe Produto
 	public static class Produto {
-        private int id;
-        private String nome;
-        private double preco;
-        private String tamanho;
-        private String sabor;
+		private int id;
+		private String nome;
+		private double preco;
+		private String tamanho;
 
-        public Produto(int id, String nome, double preco, String tamanho, String sabor) {
-            this.id = id;
-            this.nome = nome;
-            this.preco = preco;
-            this.tamanho = tamanho;
-            this.sabor = sabor;
-        }
+		public Produto(int id, String nome, double preco, String tamanho, String sabor) {
+			this.id = id;
+			this.nome = nome;
+			this.preco = preco;
+			this.tamanho = tamanho;
+			
+		}
 
-        public int getId() {
-            return id;
-        }
+		public int getId() {
+			return id;
+		}
 
-        public String getNome() {
-            return nome;
-        }
+		public String getNome() {
+			return nome;
+		}
 
-        public double getPreco() {
-            return preco;
-        }
+		public double getPreco() {
+			return preco;
+		}
 
-        public String getTamanho() {
-            return tamanho;
-        }
+		public String getTamanho() {
+			return tamanho;
+		}
 
-        public String getSabor() {
-            return sabor;
-        }
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
 
-        public void setNome(String nome) {
-            this.nome = nome;
-        }
+		public void setPreco(double preco) {
+			this.preco = preco;
+		}
 
-        public void setPreco(double preco) {
-            this.preco = preco;
-        }
+		public void setTamanho(String tamanho) {
+			this.tamanho = tamanho;
+		}
 
-        public void setTamanho(String tamanho) {
-            this.tamanho = tamanho;
-        }
 
-        public void setSabor(String sabor) {
-            this.sabor = sabor;
-        }
-
-        @Override
-        public String toString() {
-            return "ID: " + id + " | Nome: " + nome + " | Preço: " + preco + " | Tamanho: " + tamanho + " | Sabor: " + sabor;
-        }
+		@Override
+		public String toString() {
+			return "ID: " + id + " | Nome: " + nome + " | Preço: " + preco + " | Tamanho: " + tamanho;
+		}
 	}
 }
